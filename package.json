@@ -23,7 +23,8 @@
     "swiper": "^6.6.2"
   },
   "devDependencies": {
-    "parcel-bundler": "^1.12.5"
+    "parcel-bundler": "^1.12.5",
+    "parcel-plugin-sw-precache": "^1.1.2"
   },
   "browserslist": [
     "last 2 version",

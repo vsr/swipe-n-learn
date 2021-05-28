@@ -1,0 +1,7 @@
+{
+  "name": "Swipe n Learn",
+  "short_name": "Swipe",
+  "lang": "en-IN",
+  "start_url": "/",
+  "display": "standalone"
+}
