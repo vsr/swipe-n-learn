@@ -11,7 +11,7 @@ const slideList = (slideDeck) => {
   );
 };
 
-const loadSlides = (slideObj) => {
+const loadSlides = (swiper, slideObj) => {
   swiper.removeAllSlides();
   swiper.appendSlide(slideList(slideObj));
   swiper.slideTo(1);
@@ -31,7 +31,7 @@ function init() {
     },
   });
 
-  loadSlides(slides[0]);
+  loadSlides(swiper, slides[0]);
 }
 
 init();
