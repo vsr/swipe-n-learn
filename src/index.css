@@ -1,7 +1,10 @@
 :root {
-  --bg-color: #fefefe;
-  --bg-color-2: aliceblue;
-  --text-color: #121212;
+  --bg-color-1: white;
+  --bg-color-2: thistle;
+  --bg-color-3: lavender;
+  --text-color-1: black;
+  --text-color-2: gray;
+  --text-color-3: slategrey;
 }
 * {
   box-sizing: border-box;
@@ -10,8 +13,8 @@ body {
   margin: 0;
   padding: 0;
   font-size: 16px;
-  color: var(--text-color);
-  background-color: var(--bg-color);
+  color: var(--text-color-1);
+  background-color: var(--bg-color-1);
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
@@ -48,7 +51,7 @@ body {
   border-radius: 0.2rem;
 }
 #menu-button:hover {
-  background-color: var(--bg-color-2);
+  background-color: var(--bg-color-3);
 }
 #menu-button .icon {
   position: absolute;
@@ -71,9 +74,9 @@ body {
   left: 0;
   z-index: 80;
   padding: 3em;
-  transition: all 0.2s ease-in;
+  transition: all 0.1s ease-in;
   transform: translateX(-100vw);
-  background: #aef;
+  background-color: var(--bg-color-2);
   box-sizing: border-box;
 }
 .menu-open #menu-container {
