@@ -19,8 +19,14 @@
     "url": "https://github.com/vsr/swipe-n-learn/issues"
   },
   "homepage": "https://github.com/vsr/swipe-n-learn#readme",
-  "dependencies": {},
+  "dependencies": {
+    "swiper": "^6.6.2"
+  },
   "devDependencies": {
     "parcel-bundler": "^1.12.5"
-  }
+  },
+  "browserslist": [
+    "last 2 version",
+    "> 1%"
+  ]
 }

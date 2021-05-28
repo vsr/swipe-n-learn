@@ -1,0 +1,43 @@
+* {
+  box-sizing: border-box;
+}
+
+.swiper-container {
+  width: 100vw;
+  height: 100vh;
+}
+
+.swiper-slide {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  place-content: center;
+}
+#menu-button {
+  position: absolute;
+  z-index: 100;
+  left: 0;
+  top: 0;
+}
+#menu-container {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 80;
+  padding: 3em;
+  transition: all 0.2s ease-out;
+  transform: translateX(-100vw);
+  background: #aef;
+  box-sizing: border-box;
+}
+#menu-container.open {
+  transform: translateX(0vw);
+}
+
+.swiper-slide {
+  font-size: 6rem;
+  font-weight: 900;
+}
