@@ -1,8 +1,7 @@
 import Swiper from "swiper";
 import SwiperCore, { Keyboard, Mousewheel } from "swiper/core";
 import "swiper/swiper-bundle.css";
-
-import englishAlbhabet from "./assets/slides/english-alphabet";
+import slides from "./slides";
 
 SwiperCore.use([Keyboard, Mousewheel]);
 
@@ -10,6 +9,12 @@ const slideList = (slideDeck) => {
   return slideDeck.slides.map((slide) =>
     slideDeck.slideFormatter(slide, slideDeck)
   );
+};
+
+const loadSlides = (slideObj) => {
+  swiper.removeAllSlides();
+  swiper.appendSlide(slideList(slideObj));
+  swiper.slideTo(1);
 };
 
 function init() {
@@ -26,9 +31,7 @@ function init() {
     },
   });
 
-  swiper.removeAllSlides();
-  swiper.appendSlide(slideList(englishAlbhabet));
-  swiper.slideTo(1);
+  loadSlides(slides[0]);
 }
 
 init();

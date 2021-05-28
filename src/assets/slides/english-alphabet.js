@@ -4,6 +4,8 @@ const slideFormatter = (slide, slideGroup) => {
     </div>`;
 };
 export default {
+  name: "English Alphabet",
+  description: "Letters of the English Alphabet",
   slideFormatter,
   slides: [
     {
