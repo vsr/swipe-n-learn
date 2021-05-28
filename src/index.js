@@ -5,6 +5,10 @@ import "swiper/swiper-bundle.css";
 SwiperCore.use([Keyboard, Mousewheel]);
 
 function init() {
+  document.querySelector("#menu-button").addEventListener("click", () => {
+    document.body.classList.toggle("menu-open");
+  });
+
   const swiper = new Swiper(".swiper-container", {
     direction: "vertical",
     loop: true,

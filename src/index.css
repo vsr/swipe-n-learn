@@ -1,5 +1,22 @@
+:root {
+  --bg-color: #fefefe;
+  --bg-color-2: aliceblue;
+  --text-color: #121212;
+}
 * {
   box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.icon {
+  font-size: 1.5rem;
 }
 
 .swiper-container {
@@ -19,7 +36,33 @@
   z-index: 100;
   left: 0;
   top: 0;
+  background: transparent;
+  border: none;
+  margin: 0.5rem;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  place-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 0.2rem;
 }
+#menu-button:hover {
+  background-color: var(--bg-color-2);
+}
+#menu-button .icon {
+  position: absolute;
+  transition: opacity 0.2s ease-in;
+}
+.menu-icon,
+.menu-open .close-icon {
+  opacity: 1;
+}
+.menu-open .menu-icon,
+.close-icon {
+  opacity: 0;
+}
+
 #menu-container {
   width: 100vw;
   height: 100vh;
@@ -28,13 +71,14 @@
   left: 0;
   z-index: 80;
   padding: 3em;
-  transition: all 0.2s ease-out;
+  transition: all 0.2s ease-in;
   transform: translateX(-100vw);
   background: #aef;
   box-sizing: border-box;
 }
-#menu-container.open {
-  transform: translateX(0vw);
+.menu-open #menu-container {
+  transform: translate(0);
+  opacity: 1;
 }
 
 .swiper-slide {
